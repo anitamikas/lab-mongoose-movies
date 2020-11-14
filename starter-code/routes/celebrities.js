@@ -46,19 +46,19 @@ router.post('/celebrities/:id/delete', (req, res) =>{
 });
 
 
-// router.get('/celebrities/:id/edit', (req, res, next) => {
-//     Drone.findById(req.params.id).then((drone)=>{
-//     res.render('drones/update-form', drone)
-//   });
-//   });
+router.get('/celebrities/:id/edit', (req, res, next) => {
+    Celebrity.findById(req.params.id).then((celebrities)=>{
+    res.render('celebrities/edit', celebrities)
+  });
+  });
   
-//   router.post('/drones/:id/edit', (req, res, next) => {
-//     // Iteration #4: Update the drone
-//     Drone.findByIdAndUpdate(req.params.id, {name: req.body.name, propellers: req.body.propellers, 
-//       maxSpeed: req.body.maxSpeed}).then(()=>{
-//     res.redirect('/drones/list') 
-//   });
-//   });
+  router.post('/celebrities/:id/edit', (req, res, next) => {
+ 
+    Celebrity.findByIdAndUpdate(req.params.id, {title: req.body.title, occupation: req.body.occupation, 
+        catchPhrase: req.body.catchPhrase}).then(()=>{
+    res.redirect('/celebrities') 
+  });
+  });
 
 
 module.exports = router;

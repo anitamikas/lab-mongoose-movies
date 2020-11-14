@@ -1,4 +1,20 @@
 <h1>{{title}}</h1>
 <p>Welcome to {{title}}</p>
-<a href="/celebrities/index">See Celebrities</a>
+<a href="/celebrities">See Celebrities</a>
 <a href="/movies">See Movies</a>
+
+<a href="/signup">Sign Up</a>
+<br><a href="/login">Log in</a></br>
+<a href="/private">See some private stuff</a>
+{{#if username}}
+
+<h1> Hi, {{username}}</h1>
+<br><a href="/mymovies">See your list of the movies</a></br>
+
+{{/if}}
+
+<p>Welcome home bejb</p>
+
+<form action="/logout" method="POST">
+<button type="submit">Log out</button>
+</form>

@@ -1,0 +1,19 @@
+<form action="movies/:id", method="GET"></form>
+
+
+<p>Title: {{movies.title}}</p>
+<p>Genre: {{movies.genre}}</p>
+<p>Plot: {{movies.plot}}</p>
+<p>Actors:
+    {{#each movies}}
+    {{#each actors}}
+    {{name}}
+    {{/each}}
+{{/each}}
+
+{{!-- {{#each allActors}}
+   
+    {{name}}
+
+{{/each}} --}}
+</p>

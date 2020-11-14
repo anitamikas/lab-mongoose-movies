@@ -11,7 +11,18 @@
  
   <label for="plot-input">Plot:</label>
   <input type="text" name="plot" id="plot-input" />
+
+  Actor:
+  <select name="chosenActor" multiple>
+    {{#each allActors}}
+    <option value="{{_id}}">{{name}}</option>
+    {{/each}}
+  </select>
  
-  <button type="submit">Add</button>
+  <button type="submit">Save</button>
  
 </form>
+
+<p>Hold down the Ctrl (windows) or Command (Mac) button to select multiple options.</p>
+
+{{!-- <select name="cars" id="cars" multiple></select> --}}

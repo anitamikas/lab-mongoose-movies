@@ -5,9 +5,14 @@
 <a href='/movies/{{_id}}'>{{title}}</a>
 </p>
 
-{{!-- <form action="celebrities/{{this._id}}/delete", method="post">
+<button type="submit"><a href="/movies/{{this._id}}/edit">Edit</a></button>
+
+
+
+
+<form action="movies/{{this._id}}/delete", method="post">
 <button>Delete</button>
-</form> --}} 
+</form> 
 {{/each}}
 
 <a href='/movies/new'>Add a new movie</a>

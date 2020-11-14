@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
-const Movie = require('../models/Movie.model');
+// const Movie = require('../models/Movie.model');
+const Actor = require('../models/Actor.model');
  
 const DB_NAME = 'celebs';
  
@@ -11,34 +12,75 @@ mongoose.connect(`mongodb://localhost/${DB_NAME}`, {
 
 
 
+// const actor = [
+//   {
+//     name: 'Scarlet Johanson',
+//     age: 33,
+//     nationality: 'American',
+    
+//   },
+//   {
+//     name: 'Bon Jovi',
+//     age: 63,
+//     nationality: 'Canadian',
+    
+//   },
+//   {
+//     name: 'Kasia Monica',
+//     age: 22,
+//     nationality: 'Polish, American',
+    
+//   }
 
-const movie = [
-  {
-    title: 'Coding Terror',
-    genre: 'Hendrik',
-    plot: 'Teaching students the mysteries of coding'
-  },
-  {
-    title: 'I love my mum',
-    genre: 'Mir',
-    plot: 'Mir tells us the nice stories about his family'
-  },
-  {
-    title: 'Tina and Laurence visiting coding world',
-    genre: 'Anita',
-    plot: 'Lifo if two Ironhack students and their travel through JavaScript world'
-  }
+// ];
 
-];
+// Actor.create(actor)
+// .then(actorsFromDB => {
+//   console.log(`Created ${actorsFromDB.length} actors`);
 
-Movie.create(movie)
-.then(moviesFromDB => {
-  console.log(`Created ${moviesFromDB.length} movies`);
+//   // Once created, close the DB connection
+//   mongoose.connection.close();
+// })
+// .catch(err => console.log(`An error occurred while creating actors from the DB: ${err}`));
 
-  // Once created, close the DB connection
-  mongoose.connection.close();
-})
-.catch(err => console.log(`An error occurred while creating movies from the DB: ${err}`));
+
+
+
+
+
+
+
+
+// const movie = [
+//   {
+//     title: 'Coding Terror',
+//     genre: 'Hendrik',
+//     plot: 'Teaching students the mysteries of coding',
+    
+//   },
+//   {
+//     title: 'I love my mum',
+//     genre: 'Mir',
+//     plot: 'Mir tells us the nice stories about his family',
+    
+//   },
+//   {
+//     title: 'Tina and Laurence visiting coding world',
+//     genre: 'Anita',
+//     plot: 'Lifo if two Ironhack students and their travel through JavaScript world',
+    
+//   }
+
+// ];
+
+// Movie.create(movie)
+// .then(moviesFromDB => {
+//   console.log(`Created ${moviesFromDB.length} movies`);
+
+//   // Once created, close the DB connection
+//   mongoose.connection.close();
+// })
+// .catch(err => console.log(`An error occurred while creating movies from the DB: ${err}`));
 
 
 
